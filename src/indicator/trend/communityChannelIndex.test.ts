@@ -10,14 +10,14 @@ describe('Community Channel Index (CMI)', () => {
   const closings = [9, 11, 7, 10, 8];
 
   it('should be able to compute with a config', () => {
-    const expected = [NaN, 133.33, 114.29, 200, 26.32];
+    const expected = [0, 133.33, 114.29, 200, 26.32];
 
     const actual = cci(highs, lows, closings, { period: 50 });
     expect(roundDigitsAll(2, actual)).toStrictEqual(expected);
   });
 
   it('should be able to compute without a config', () => {
-    const expected = [NaN, 133.33, 114.29, 200, 26.32];
+    const expected = [0, 133.33, 114.29, 200, 26.32];
 
     const actual = cci(highs, lows, closings);
     expect(roundDigitsAll(2, actual)).toStrictEqual(expected);

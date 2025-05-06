@@ -72,7 +72,7 @@ export function divide(values1: number[], values2: number[]): number[] {
   const result = new Array<number>(values1.length);
 
   for (let i = 0; i < result.length; i++) {
-    result[i] = values1[i] / values2[i];
+    result[i] = values1[i] / (values2[i] || 0.0000001);
   }
 
   return result;
